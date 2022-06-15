@@ -78,17 +78,37 @@ end
 # the methods that are implemented on it.
 #
 class Human
+
+    # Any variable with a double @ is static
+    # and belongs to the class itself
+    @@human_population = 0
+
+    # You can easily add getters and setters 
+    # to a class using the attr_accessor method.
+    attr_accessor :face
+
     # Define the initialize method to run code
     # when a new object is constructed. It works
     # like the constructor in other languages.
-    def initialize(name)
-        @name = name
+
+    def initialize()
+        # Any variable that starts with an @
+        # belongs to an object instance.
+        @dna = Random.rand
+        @face = "😉"
     end
 
     def quack()
         puts "🦆 quack!"
     end
 end
+
+# Now we can create a new object instance by calling the new 
+# method on the class.
+jeff = Human.new
+
+puts jeff.quack
+
 
 
 # Print the following string to the console: 
@@ -111,3 +131,8 @@ g = Greeter.new("world")
 # Output "Hello World!"
 g.salute
  
+
+
+# Finally, to run the code, you can use the ruby interpreter
+# invoked with the ruby command from the terminal:
+# $ ruby basics.rb
