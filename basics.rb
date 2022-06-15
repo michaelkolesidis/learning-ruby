@@ -62,8 +62,33 @@ end
 
 
 
+# Block can also take arguments, found between
+# the pipe characters ||
+3.times do |time|
+    "Ruby is awesome 💎 #{time}"
+end
 
 
+
+# You can use the class keyword to create blueprints
+# for your own custom objects. Ruby supports duck typing:
+# (if it walks like a duck and quacks like a duck, then 
+# it's a duck). In other words, it will not throw type
+# errors based on the class itself, but rather on 
+# the methods that are implemented on it.
+#
+class Human
+    # Define the initialize method to run code
+    # when a new object is constructed. It works
+    # like the constructor in other languages.
+    def initialize(name)
+        @name = name
+    end
+
+    def quack()
+        puts "🦆 quack!"
+    end
+end
 
 
 # Print the following string to the console: 
